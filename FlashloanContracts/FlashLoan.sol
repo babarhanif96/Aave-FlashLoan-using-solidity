@@ -1,14 +1,14 @@
-//Use the lisence here: MIT & Apachai standart
-//@dev/Developer = Pavan Ananth Sharma
+//Non-Lisence you can Use the lisence here: MIT & Apachai standart
+//@dev/Developer = Muhammad Shahzaib Saleem
 //@.NET/Network = Kovan Test Network
-pragma solidity ^0.6.5;
+pragma solidity ^0.8.5;
 import "./FlashLoanReceiverBase.sol";
 import "./ILendingPoolAddressesProvider.sol";
 import "./ILendingPool.sol";
 
 contract FlashloanV1 is FlashLoanReceiverBaseV1 {
     
-    string _Real_Owner = "Pavan Ananth Sharma" ;
+    string _Real_Owner = "Muhammad Shahzaib Saleem" ;
     
     function Owner_Of_This_Contract() public view returns(string memory){
         return _Real_Owner;
@@ -19,9 +19,9 @@ contract FlashloanV1 is FlashLoanReceiverBaseV1 {
  /**
         Flash loan 1000000000000000000 wei (1 ether) worth of `_asset`
      */
- function flashloan(address _asset) public onlyOwner {
+ function Flashloan(address _asset) public onlyOwner {
         bytes memory data = "";
-        uint amount = 1000000 ether; //this is the loan amount which will be seen or converted to DAI which means if you enter in 100 here you will be taking a loan of 100 DAI and so on.
+        uint amount = 2000000 ether; //this is the loan amount which will be seen or converted to DAI which means if you enter in 100 here you will be taking a loan of 100 DAI and so on.
         //basically we can say that this ebtered amount is converted to wei which is a small decimal of ETH and then it is placed in to the mem pool for the mining of the DAI 
 
         ILendingPoolV1 lendingPool = ILendingPoolV1(addressesProvider.getLendingPool());
